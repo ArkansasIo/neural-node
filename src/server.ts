@@ -77,7 +77,12 @@ const server = createServer(async (req, res) => {
         });
         return;
       }
-      sendJson(res, 200, runNeuron(body));
+      try {
+        sendJson(res, 200, runNeuron(body));
+      } catch (error) {
+        const err = error as Error;
+        sendJson(res, 400, { error: err.message || "Invalid neuron input" });
+      }
     } catch (error) {
       const err = error as Error & { statusCode?: number };
       sendJson(res, err.statusCode ?? 400, { error: err.message || "Bad request" });
