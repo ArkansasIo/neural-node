@@ -1,0 +1,31 @@
+{
+  "name": "neural-node",
+  "version": "0.1.0",
+  "private": false,
+  "description": "A dependency-light TypeScript foundation for neural-network node experiments.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "type": "module",
+  "main": "dist/server.js",
+  "types": "dist/neuron.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/neuron.d.ts",
+      "import": "./dist/neuron.js"
+    }
+  },
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "npm run build && node --test dist-test/test/*.test.js",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.2"
+  }
+}
