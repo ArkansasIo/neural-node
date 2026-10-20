@@ -7,13 +7,18 @@ export * from "./layers/gru.js";
 export * from "./layers/dropout.js";
 export * from "./layers/layer-norm.js";
 export * from "./models/gru-mlp.js";
+export * from "./models/model-registry.js";
 export * from "./training/loss.js";
 export * from "./training/optimizer.js";
 export * from "./training/adam.js";
 export * from "./training/sgd.js";
 export * from "./training/trainer.js";
+export * from "./training/gradient-clipping.js";
 export * from "./data/dataset.js";
 export * from "./data/normalizer.js";
+export * from "./data/split.js";
+export * from "./metrics.js";
+export * from "./config.js";
 export * from "./serialization/model-json.js";
 
 export const NEURAL_NODE_MLP_GRU_VERSION = "4.0.0-alpha.1";
