@@ -1,0 +1,24 @@
+name: Neural Node MLP-GRU Plugin CI
+
+on:
+  push:
+    paths:
+      - 'plugins/neural-node-mlp-gru-4.0/**'
+  pull_request:
+    paths:
+      - 'plugins/neural-node-mlp-gru-4.0/**'
+
+jobs:
+  typecheck:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: plugins/neural-node-mlp-gru-4.0
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: npm install --ignore-scripts
+      - run: npm run typecheck
+      - run: npm run build
