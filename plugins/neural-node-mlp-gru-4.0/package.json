@@ -1,0 +1,12 @@
+{
+  "name": "@neural-node/mlp-gru-4",
+  "version": "4.0.0-alpha.1",
+  "private": true,
+  "description": "Neural Node MLP, GRU, and hybrid GRU-MLP plugin.",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  }
+}
