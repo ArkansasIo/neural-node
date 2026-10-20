@@ -1,8 +1,8 @@
 {
   "name": "@neural-node/mlp-gru-4",
-  "version": "4.0.0-alpha.1",
+  "version": "4.0.0-alpha.2",
   "private": true,
-  "description": "CPU-first Neural Node MLP, GRU, and hybrid GRU-MLP plugin.",
+  "description": "CPU-first Neural Node MLP, GRU, and hybrid GRU-MLP plugin with trainable backpropagation and BPTT.",
   "type": "module",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
